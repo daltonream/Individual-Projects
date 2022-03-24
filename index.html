@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Beer Calculator</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Beer Calculator!</h1>
+                    <p class="lead mb-0">How many beers till your 10 percent beer??</p>
+                </div>
+            </div>
+        </header>   
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Blog post-->
+                    <div class="card mb-4" >
+                        <a href="#!"><img class="card-img-top" src="https://i.gifer.com/EJuA.gif" alt="gif of keg stand" /></a>
+                        <div class="card-body">
+                            <h2 class="card-title h4">Enter your Weight:</h2>
+                            <p id = "errorMessage" hidden = true; class="card-text" style="color:red;">Please enter a valid number</p>
+                            <div class="input-group">
+                                <input id="weight" class="form-control" type="number" placeholder="Enter weight..." aria-label="Enter weight..." aria-describedby="button-search" />
+                                <button onClick = "letsDrink();" class="btn btn-primary" id="button-search" type="button">Calculate!</button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div hidden = true; id = "answerField"; class="col-lg-4"> 
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 id = "answer" class="card-title h4"></h2>
+                            <h3 id = "gainedWeight" class="card-title h6"></h3>
+                            <h3 id = "overallWeight" class="card-title h6"></h3>
+                            <br>
+                            <p class="card-text">It seems like a lot, but remember every 4 (12oz) beers you drink you
+                                 gain about 3 pounds, thus increasing your overall body weight. </p>
+                             <br>
+                             <p class="card-text"> * assuming you do not go to the bathroom or digest the beer</p>
+                             <a class="btn btn-primary" onClick = "showEquation();">Equation</a>
+                        </div>
+                    </div>
+                    <div hidden = true; id = "equation"; class="card mb-4">
+                        <div class="card-body">
+                            <a href="#!"><img class="card-img-top"  width="500" height="250"src="pictures/Equation.png" alt="Equation"/></a>
+                            <h5 class="card-text"> Factors we did not consider:</h5>
+                            <p class="card-text"> - <strong>Breaking the seal: </strong> on average you pee about a 1lb - 1.5lb.
+                                 This will then push other fluids allowing more beer while mainting the a similar weight. 
+                            </p>
+                            <p class="card-text"> <strong>- Temperatures:</strong> Temperatrues of the beer, room, or you can change the rate of your metablisim. </p>
+                            <p class="card-text"> <strong>- Being a Lightweight:</strong> Assuming you puke, which you most likely will, would also change the number of beers.</p>
+                            <p class="card-text"> <strong>- What you previously consumed:</strong> Various foods will speed up or slow down your metabolism. </p>
+                            <p class="card-text"> <strong>- About a million others:</strong> Aint nobody got time for that.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="beerCalculator.js" defer ></script>                   
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+        </footer>
+    </body>
+</html>
