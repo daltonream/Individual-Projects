@@ -14,12 +14,9 @@ function letsDrink(){
             i++;
            
             // Budlight overall weight 1 fl-oz = 1.13 oz wt
-             gainedPounds = (((12 * 1.13)  * i) / 16); 
+             gainedPounds = ((12 * 1.13)  * i) / 16; 
              gainedPounds = parseInt(gainedPounds, 10)
-             let beerPercentage = ((gainedPounds / (weight + gainedPounds)) * 100)
-             let bodyPercentage = (gainedPounds + weight) / 10;
-             console.log(Math.round((beerPercentage / bodyPercentage) * 100)/100)
-            if (Math.round((beerPercentage / bodyPercentage) * 100)/100 >= .7) {
+            if (gainedPounds >= (gainedPounds + weight) * .10){
                 madeIt = true;
                 document.querySelector("#answer").innerHTML = "Number of Beers: " + i;
                 document.querySelector("#gainedWeight").innerHTML = "Gained Weight: " + gainedPounds + "lbs";
@@ -27,6 +24,7 @@ function letsDrink(){
                 document.querySelector("#overallWeight").hidden = false;
                 break;
             }
+           
         } while (i < 3000);
         if (madeIt === false){
             document.querySelector("#answer").innerHTML = "Number of Beers: ∞";
