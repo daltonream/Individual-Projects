@@ -1,5 +1,3 @@
-
-
 function letsDrink(){
     let weight = document.querySelector("#weight").value;
     let isnum = /^-?[0-9]+([.,][0-9]+)?$/.test(weight);
@@ -14,13 +12,12 @@ function letsDrink(){
             i++;
            
             // Budlight overall weight 1 fl-oz = 1.13 oz wt
-             gainedPounds = ((12 * 1.13)  * i) / 16; 
-             gainedPounds = parseInt(gainedPounds, 10)
+             gainedPounds = (((12 * 1.13)  * i) / 16); 
             if (gainedPounds >= (gainedPounds + weight) * .10){
                 madeIt = true;
                 document.querySelector("#answer").innerHTML = "Number of Beers: " + i;
-                document.querySelector("#gainedWeight").innerHTML = "Gained Weight: " + gainedPounds + "lbs";
-                document.querySelector("#overallWeight").innerHTML = "Overall Weight: " + (gainedPounds + weight) + "lbs";
+                document.querySelector("#gainedWeight").innerHTML = "Gained Weight: " + gainedPounds.toFixed(1) + "lbs";
+                document.querySelector("#overallWeight").innerHTML = "Overall Weight: " + (gainedPounds + weight).toFixed(1) + "lbs";
                 document.querySelector("#overallWeight").hidden = false;
                 break;
             }
