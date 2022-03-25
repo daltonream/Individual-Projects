@@ -28,7 +28,7 @@ function letsDrink(){
         } while (i < 3000);
         if (madeIt === false){
             document.querySelector("#answer").innerHTML = "Number of Beers: ∞";
-            document.querySelector("#gainedWeight").innerHTML = "You would need to drink over 400 beers, I would think you'd die.";
+            document.querySelector("#gainedWeight").innerHTML = "You would need to drink over 3,000 beers, I think you'd die.";
             document.querySelector("#overallWeight").hidden = true;
         }
     
